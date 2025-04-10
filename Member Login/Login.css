@@ -1,0 +1,145 @@
+*{
+  font-family: "Roboto Flex";
+  
+}
+
+.mainpage{
+  width: 100%;
+  height: 100vh;
+  background:linear-gradient(45deg, rgb(43, 45, 133),rgb(140, 199, 233));
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuContainer{
+  background-color: white;
+  width: 500px;
+  margin: 100px auto 10px;
+  padding: 10px 50px 50px;
+  border-radius: 10px;
+}
+.row, .username, .passwordContainer{
+  display: block;
+}
+.login{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+/*Member Login Text*/
+.row h2{
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+/*Login input and using other account*/
+.column{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 100px;
+}
+.loginHeaders{
+  display:flex;
+  justify-content: space-between;
+}
+.login p{
+  font-style: bold;
+  font-size: 15px;
+  margin-bottom: 5px;
+  
+}
+
+.forgotPassword{
+  margin-top: 5px;
+  padding-top: 5px;
+}
+
+.passwordInput, .usernameInput{
+  width: 150px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+/*Login using other account*/
+.anotherAccount{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 10px;
+  
+}
+.googleContainer, .appleContainer, .linkedinContainer{
+  display:flex;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 5px;
+  padding: 5px 5px 5px;
+
+  background-color: white;
+  transition: background-color .5s;
+}
+.googleContainer, .appleContainer, .linkedinContainer:hover{
+  cursor: pointer;
+}
+
+.google, .apple, .linkedin{
+  width: 40px;
+}
+
+.linkedin{
+  border-radius: 5px;
+}
+
+
+/*Animation for other accounts*/
+.googleContainer, .appleContainer, .linkedinContainer{
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: animate 1s ease-out forwards 1;
+}
+
+.appleContainer{
+  animation-delay: .25s;
+}
+
+.linkedinContainer{
+  animation-delay: .5s;
+}
+
+@keyframes animate{
+  to{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.googleContainer:hover{
+  background-color: rgb(126, 226, 143);
+}
+.appleContainer:hover{
+  background-color: rgb(226, 126, 126);
+}
+.linkedinContainer:hover{
+  background-color: rgb(126, 153, 226);
+}
+/*Login button display*/
+.loginButtonContainer{
+  padding-top: 30px;
+  display:flex;
+  justify-content: center;
+}
+
+.loginButton{
+  padding:10px 20px;
+  border-radius: 5px;
+}
+.loginButton:hover{
+  cursor: pointer;
+}
+.loginButton:active{
+  background-color: rgb(189, 189, 189);
+}
