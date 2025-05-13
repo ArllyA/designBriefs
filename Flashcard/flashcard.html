@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="flashcard.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="Container">
+      <div class="containerLeft">
+        <div class="setOptions">
+          <label for="set">Choose a set</label>
+
+          <select name="set" id="set">
+            <option value="set1">set1</option>
+            <option value="set2">set2</option>
+            <option value="set3">set3</option>
+          </select>
+          <div class="setButton">
+            <button class="newSet">Create New</button>
+          </div>
+        </div>
+        <div class="set-CreateCard">
+          <div class="setCardVocab">
+            <p>Vocab</p>
+            <input
+              type="text"
+              class="vocabInput"
+              placeholder="Enter Vocab Word"
+            />
+          </div>
+          <div class="setCardDefinition">
+            <p>Definition</p>
+            <textarea
+              class="definitionInput"
+              placeholder="Enter Definition"
+              rows="6"
+              cols="20"
+            ></textarea>
+          </div>
+          <button class="addCard">Add</button>
+        </div>
+      </div>
+
+      <div class="containerMid">
+        <div class="flashcardOptions">
+          <div class="flashcard-setName">
+            <h1>Set Name</h1>
+          </div>
+        </div>
+        <div class="flashcard">
+          <p>Vocab</p>
+        </div>
+        <div class="flashcardAnswer">
+          <div class="flashcardAnswer-flip">
+            <button>Flip</button>
+          </div>
+          <div class="flashcardAnswer-buttons">
+            <button class="easy">Easy</button>
+            <button class="okay">Okay</button>
+            <button class="hard">Hard</button>
+          </div>
+        </div>
+      </div>
+      <div class="containerRight">
+        <h4>Options</h4>
+        <button class="shuffleDeck">Shuffle Deck</button>
+        <button class="deleteCard">Delete Card</button>
+        <button class="termsList">Terms List</button>
+        <button class="deleteDeck"><span>Delete Deck</span></button>
+      </div>
+    </div>
+  </body>
+</html>

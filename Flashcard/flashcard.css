@@ -1,0 +1,203 @@
+*{
+  font-family: "Montserrat";
+  color: rgb(100, 100, 100);
+}
+* button:not(.deleteDeck){
+  background-color: rgb(255, 181, 152);
+  color: white;
+  border-color: white;
+  border-style: solid;
+  
+}
+* button:hover:not(.deleteDeck){
+  cursor: pointer;
+  background-color: rgb(243, 148, 110);
+}
+* button:active:not(.deleteDeck){
+  background-color: rgb(189, 101, 66);
+}
+
+
+.Container{
+  display:flex;
+  justify-content: flex-start;
+  background:linear-gradient(45deg, rgb(241, 178, 105),rgb(255, 133, 154) );
+  gap:50px;
+  width: 1000px;
+  height: 500px;
+  margin-top: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  
+}
+.containerLeft, .containerMid, .containerRight{
+  display:flex;
+  flex-direction:column;
+  
+}
+
+
+.containerLeft{
+  background-color: rgba(255, 234, 252, 0.5);
+  border-radius: 10px;
+  margin: 5px 10px 5px;
+  padding: 5px 5px 5px;
+}
+.containerLeft h1{
+  text-align: center;
+  
+}
+.setOptions, .set-CreateCard{
+  display:flex;
+  flex-direction:column;
+}
+
+
+.setOptions{
+  gap: 10px;
+  margin-bottom:20px;
+
+}
+.setOptions label{
+  text-align: center;
+}
+.setOptions select{
+  padding: 5px 0px 5px;
+  border-radius: 10px;
+}
+.setButton{
+  display: flex;
+  justify-content: center;
+}
+.newSet{
+  padding: 10px 40px;
+  border-radius: 5px;
+  
+}
+
+
+.set-CreateCard{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.set-CreateCard p{
+  margin: 5px 0px 5px;
+}
+.set-CreateCard button{
+  padding: 10px;
+  border-radius: 5px;
+}
+.vocabInput{
+  border-radius: 5px;
+}
+textarea {
+  resize: none;
+  border-radius: 5px;
+}
+
+
+
+.containerMid{
+  width: 500px;
+  margin-right: 25px;
+ 
+}
+.containerMid{
+  display:flex;
+  flex-direction: column;
+}
+.flashcardOptions-buttons{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+
+.flashcard{
+  background-color: rgba(255, 234, 252, 0.75);
+  padding: 100px;
+  border-radius: 5px;
+
+}
+.flashcard p{
+  text-align: center;
+}
+
+
+.flashcardAnswer-flip, .flashcardAnswer-buttons{
+  display:flex;
+  justify-content: center;
+  gap: 5px;
+}
+.flashcardAnswer-flip{
+  margin: 10px 10px 10px;
+}
+.flashcardAnswer-flip button, .flashcardAnswer-buttons button{
+  padding: 20px 20px 20px;
+  border-radius: 5px;
+  box-shadow: 2px 3px 5px rgb(243, 106, 14);
+}
+.flashcardAnswer-buttons{
+  margin: 0px 10px 0px;
+}
+
+
+.containerRight{
+  background-color: rgba(255, 234, 252, 0.5);
+  max-height: 400px;
+  padding: 10px 20px 10px;
+  margin-top: 50px;
+  border-radius: 10px;
+  justify-content: flex-start;
+  gap:15px
+}
+.containerRight h4{
+  text-align: center;
+}
+.shuffleDeck, .deleteCard, .termsList{
+  padding: 20px 5px 20px;
+  border-radius: 5px;
+}
+
+.deleteDeck{
+  position: relative;
+  background-color: rgb(255, 152, 152);
+  border-style: solid;
+  border-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  margin-top: 50px;
+}
+
+.deleteDeck::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: rgb(180, 19, 19);
+  z-index: 1;
+  transition: width 0.4s ease;
+}
+
+.deleteDeck:hover::before{
+ width: 100%;
+}
+.deleteDeck span{
+  color: white;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+.deleteDeck:hover span {
+  color: white;
+}
+.deleteDeck:active{
+  background-color: rgb(112, 11, 11);
+}
+
